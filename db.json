@@ -1,0 +1,50 @@
+{
+  "productList": [
+    {
+      "productName": " Apple",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 100,
+      "comment": " Nothing",
+      "date": "2022-05-03T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": " OnePlus Nord",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 25000,
+      "comment": " Best one",
+      "date": "2021-07-26T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": " Apple",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 240,
+      "comment": " Nothing",
+      "date": "2022-05-03T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": " TV",
+      "category": "Electronics",
+      "freshness": "Second Handed",
+      "price": 25000,
+      "comment": " NA",
+      "date": "2022-05-04T18:30:00.000Z",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

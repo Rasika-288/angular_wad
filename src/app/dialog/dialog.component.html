@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>Add Product form</h1>
+<div mat-dialog-content>
+  <form [formGroup]="productForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Product Name</mat-label>
+      <input formControlName="productName" matInput placeholder="Name">
+  
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select palceholder="Category" formControlName="category">
+        <mat-option value="Fruits">Fruits</mat-option>
+        <mat-option value="Vegetables">Vegetables</mat-option>
+        <mat-option value="Electronics">Electronics</mat-option>
+        <mat-option value="Clothes">Clothes</mat-option>
+  
+      </mat-select>
+  
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input formControlName="date" matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  
+    <label for="">
+      <h1>Product Freshness</h1>
+    </label>
+    <mat-radio-group formControlName="freshness" class="example-radio-group">
+      <mat-radio-button *ngFor="let fresh of freshnessList" [value]="fresh" class="example-radio-button" color="warn">
+        {{fresh}}
+      </mat-radio-button>
+    </mat-radio-group>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" type="number" formControlName="price">
+  
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Comment</mat-label>
+      <textarea matInput formControlName="comment">
+  
+      </textarea>
+  
+    </mat-form-field>
+  
+  
+
+  </form>
+
+
+  
+
+<div mat-dialog-actions [align] = "'end'">
+  <button color="warn" mat-raised-button mat-dialog-close="">Close</button>
+  <button color="primary" mat-raised-button mat-dialog-close="" (click)="addProduct()">{{actionBtn}}</button>
+</div>
